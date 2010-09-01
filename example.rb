@@ -48,7 +48,7 @@ class AttachmentsController < ApplicationController
        
     # save file into attachment
     attach = Attachment.new(:uploaded_data => file)
-    attach.asset_id = params[:asset_id]
+    attach.person_id = params[:person_id]
     attach.save!
 
     respond_to do |format|
