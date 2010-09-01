@@ -2,15 +2,12 @@ class Attachment < ActiveRecord::Base
   
   belongs_to :person
 
-  ####plugin acts_as_attachment
   has_attachment :storage => :file_system, :max_size => 13.megabyte, :streaming => "false"
  
   validates_as_attachment
   
   # Read content of the attachment
   def get_attachment_content
-    # self.public_filename = "/attachments/0000/0002/filename.jpg" with slash in front
-    # $attachments_location = "/Graaasp/current/public" with no slash at the end
     path = $attachments_location + self.public_filename
     
     @data = ""
