@@ -5,7 +5,6 @@ uploaded via ajax with fileuploaded.js library.
 This code doesn't work at the moment properly with Safari,
 unless you specify a Content-Type in fileuploaded.js library.
 To do this add the following line:
-
 xhr.setRequestHeader("Content-Type", "application/octet-stream");
 
 just before xhr.send(file).
