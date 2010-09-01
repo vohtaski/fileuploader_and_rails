@@ -1,4 +1,4 @@
-### Example for library ###
+### Rails example for fileupload.js library ###
 This is an example of Rails server code that saves attachment
 uploaded via ajax with fileuploaded.js library.
 
@@ -9,10 +9,10 @@ To do this add the following line:
 
 just before xhr.send(file).
 
-You should have the following:
+You should have the following in fileupload.js:
 
-xhr.open("POST", this._options.action + queryString, true);
-xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
-xhr.setRequestHeader("X-File-Name", encodeURIComponent(name));
-xhr.setRequestHeader("Content-Type", "application/octet-stream");
-xhr.send(file);
+        xhr.open("POST", this._options.action + queryString, true);
+        xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+        xhr.setRequestHeader("X-File-Name", encodeURIComponent(name));
+        xhr.setRequestHeader("Content-Type", "application/octet-stream");
+        xhr.send(file);
